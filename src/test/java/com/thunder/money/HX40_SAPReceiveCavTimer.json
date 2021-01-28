@@ -1,0 +1,12 @@
+{
+  "@type":"com.bokesoft.cms.designer.pkg.ActionPkg",
+  "action":{
+    "actionExp":"cms.ActionExp.Viewer({json})\n& cms.ActionExp.Data(com.fehorizon.erp.hx40.HX40_SAPReceiveCavTimer.sapReceiveCavTimer())",
+    "actionUrl":"/HXDDC/HX40_SAPReceiveCavTimer.action",
+    "code":"HX40_SAPReceiveCavTimer",
+    "name":"收款核销单自动入账，每天早上3:30",
+    "notes":""
+  },
+  "nodeType":"0",
+  "parentCode":"DDC"
+}

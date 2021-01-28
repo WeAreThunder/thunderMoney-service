@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thunder.money.mapper.ScmHx07SettlereceivableCcMapper">
+  <resultMap id="BaseResultMap" type="com.thunder.money.entity.ScmHx07SettlereceivableCc">
+    <!--@mbg.generated-->
+    <!--@Table SCM_HX07_SETTLERECEIVABLE_CC-->
+    <result column="BILLDTLID" jdbcType="DECIMAL" property="billdtlid" />
+    <result column="BILLID" jdbcType="DECIMAL" property="billid" />
+    <result column="CC_STATUS" jdbcType="DECIMAL" property="ccStatus" />
+    <result column="CC_CHANGEDATE" jdbcType="TIMESTAMP" property="ccChangedate" />
+    <result column="CC_NOTES" jdbcType="VARCHAR" property="ccNotes" />
+    <result column="CC_MENDER" jdbcType="DECIMAL" property="ccMender" />
+    <result column="CC_MENDERTIME" jdbcType="TIMESTAMP" property="ccMendertime" />
+    <result column="CC_LASTSTATUS" jdbcType="DECIMAL" property="ccLaststatus" />
+    <result column="DTL_LASTSTATUS" jdbcType="DECIMAL" property="dtlLaststatus" />
+    <result column="SYNCDATE" jdbcType="TIMESTAMP" property="syncdate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    BILLDTLID, BILLID, CC_STATUS, CC_CHANGEDATE, CC_NOTES, CC_MENDER, CC_MENDERTIME, 
+    CC_LASTSTATUS, DTL_LASTSTATUS, SYNCDATE
+  </sql>
+  <insert id="insert" parameterType="com.thunder.money.entity.ScmHx07SettlereceivableCc">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLE_CC (BILLDTLID, BILLID, CC_STATUS, 
+      CC_CHANGEDATE, CC_NOTES, CC_MENDER, 
+      CC_MENDERTIME, CC_LASTSTATUS, DTL_LASTSTATUS, 
+      SYNCDATE)
+    values (#{billdtlid,jdbcType=DECIMAL}, #{billid,jdbcType=DECIMAL}, #{ccStatus,jdbcType=DECIMAL}, 
+      #{ccChangedate,jdbcType=TIMESTAMP}, #{ccNotes,jdbcType=VARCHAR}, #{ccMender,jdbcType=DECIMAL}, 
+      #{ccMendertime,jdbcType=TIMESTAMP}, #{ccLaststatus,jdbcType=DECIMAL}, #{dtlLaststatus,jdbcType=DECIMAL}, 
+      #{syncdate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.thunder.money.entity.ScmHx07SettlereceivableCc">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLE_CC
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="billdtlid != null">
+        BILLDTLID,
+      </if>
+      <if test="billid != null">
+        BILLID,
+      </if>
+      <if test="ccStatus != null">
+        CC_STATUS,
+      </if>
+      <if test="ccChangedate != null">
+        CC_CHANGEDATE,
+      </if>
+      <if test="ccNotes != null">
+        CC_NOTES,
+      </if>
+      <if test="ccMender != null">
+        CC_MENDER,
+      </if>
+      <if test="ccMendertime != null">
+        CC_MENDERTIME,
+      </if>
+      <if test="ccLaststatus != null">
+        CC_LASTSTATUS,
+      </if>
+      <if test="dtlLaststatus != null">
+        DTL_LASTSTATUS,
+      </if>
+      <if test="syncdate != null">
+        SYNCDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="billdtlid != null">
+        #{billdtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="billid != null">
+        #{billid,jdbcType=DECIMAL},
+      </if>
+      <if test="ccStatus != null">
+        #{ccStatus,jdbcType=DECIMAL},
+      </if>
+      <if test="ccChangedate != null">
+        #{ccChangedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ccNotes != null">
+        #{ccNotes,jdbcType=VARCHAR},
+      </if>
+      <if test="ccMender != null">
+        #{ccMender,jdbcType=DECIMAL},
+      </if>
+      <if test="ccMendertime != null">
+        #{ccMendertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ccLaststatus != null">
+        #{ccLaststatus,jdbcType=DECIMAL},
+      </if>
+      <if test="dtlLaststatus != null">
+        #{dtlLaststatus,jdbcType=DECIMAL},
+      </if>
+      <if test="syncdate != null">
+        #{syncdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

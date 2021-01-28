@@ -1,0 +1,35 @@
+# 自动到CB那边获得退款状态 每5分钟
+//HX07_RefundmentFromCB
+//HX_DDC_HX07_REFUNDMENTFROMCB.json
+# 租赁订单导入 SAP, 每半小时执行一次(启动后至少等待 5 min)
+//HX03_RO_SAP_Import
+//HX_DDC_HX03_RO_SAP_IMPORT
+#运营台账 每天04：00点
+//Daily_HX03_Report_Operation3
+//HX_DDC_DAILY_HX03_REPORT_OPERATION3
+#周转运营台账 每天04：30点
+//Daily_HX03_Report_TurnOperation3
+//HX_DDC_DAILY_HX03_REPORT_TURNOPERATION3
+# 抵扣核销自动入账，每天早上4:40
+//HX40_SAPDeductionCAVTimer
+//HX_DDC_HX40_SAPDEDUCTIONCAVTIMER
+# 收款核销是否我司人员打款以及我司打款人姓名定时任务 每天早上6点
+//HX07_Receive_CAVOurStaff
+//HX_DDC_HX07_RECEIVE_CAVOURSTAFF
+#收款核销推送未审批单据推送审批人，每天中午11点
+//HX07_Receive_CAVApprover
+//HX_DDC_HX07_RECEIVE_CAVAPPROVER
+# 租赁订单已完结状态自动更新,每天晚上23点
+//HX03_RO_ChangeClosed
+//HX_DDC_HX03_RO_CHANGECLOSED
+#收款核销推送未审批单据推送店长，每周五上午9：00
+//HX07_Receive_CAVShopManager
+//HX_DDC_HX07_RECEIVE_CAVSHOPMANAGER
+#收款核销记录扩展明细  每天02:30点-excel导出
+//HX07_Receive_CAVView_Ext_Execl
+//HX_DDC_HX07_RECEIVE_CAVVIEW_EXT_EXECL
+#收款台账  每天02:30点-excel导出
+//HX07_Report_Receive_Excel
+//HX_DDC_HX07_REPORT_RECEIVE_EXCEL
+
+

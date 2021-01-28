@@ -1,0 +1,12 @@
+{
+  "@type":"com.bokesoft.cms.designer.pkg.ActionPkg",
+  "action":{
+    "actionExp":"cms.ActionExp.Viewer({json})\n& cms.ActionExp.Data(com.fehorizon.erp.hx07.HX07_DeductionAutoCreateRo.master())",
+    "actionUrl":"/HXDDC/HX07_DeductionAutoCreateRo.action",
+    "code":"HX07_DeductionAutoCreateRo",
+    "name":"自动生成抵扣核销单(周转、模架、道路) 每日21:30执行 启动后至少等待 5 min",
+    "notes":""
+  },
+  "nodeType":"0",
+  "parentCode":"DDC"
+}

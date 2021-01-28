@@ -1,0 +1,12 @@
+{
+  "@type":"com.bokesoft.cms.designer.pkg.ActionPkg",
+  "action":{
+    "actionExp":"cms.ActionExp.Viewer({json})\n& cms.ActionExp.Data(com.fehorizon.erp.hx07.HX07_DeductionAutoCreate.master())",
+    "actionUrl":"/HXDDC/HX07_DeductionAutoCreate.action",
+    "code":"HX07_DeductionAutoCreate",
+    "name":"自动生成抵扣核销单 每日21:30执行 启动后至少等待 5 min",
+    "notes":""
+  },
+  "nodeType":"0",
+  "parentCode":"DDC"
+}

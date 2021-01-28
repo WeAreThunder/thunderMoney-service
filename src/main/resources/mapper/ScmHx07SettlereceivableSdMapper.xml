@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thunder.money.mapper.ScmHx07SettlereceivableSdMapper">
+  <resultMap id="BaseResultMap" type="com.thunder.money.entity.ScmHx07SettlereceivableSd">
+    <!--@mbg.generated-->
+    <!--@Table SCM_HX07_SETTLERECEIVABLE_SD-->
+    <result column="BILLDTLID" jdbcType="DECIMAL" property="billdtlid" />
+    <result column="BILLID" jdbcType="DECIMAL" property="billid" />
+    <result column="SD_ROID" jdbcType="DECIMAL" property="sdRoid" />
+    <result column="SD_EQUORMATDESC" jdbcType="VARCHAR" property="sdEquormatdesc" />
+    <result column="SD_EQUIPMENT" jdbcType="VARCHAR" property="sdEquipment" />
+    <result column="SD_MATERIAL" jdbcType="DECIMAL" property="sdMaterial" />
+    <result column="SD_MEASUREUNIT" jdbcType="DECIMAL" property="sdMeasureunit" />
+    <result column="SD_QTY" jdbcType="DECIMAL" property="sdQty" />
+    <result column="SD_CHARGETYPE" jdbcType="DECIMAL" property="sdChargetype" />
+    <result column="SD_STARTDATE" jdbcType="TIMESTAMP" property="sdStartdate" />
+    <result column="SD_ENDDATE" jdbcType="TIMESTAMP" property="sdEnddate" />
+    <result column="SD_NEXTSETTLEDATE" jdbcType="TIMESTAMP" property="sdNextsettledate" />
+    <result column="SD_PRICE" jdbcType="DECIMAL" property="sdPrice" />
+    <result column="SD_CHARGEINFO" jdbcType="VARCHAR" property="sdChargeinfo" />
+    <result column="SD_NOTE" jdbcType="VARCHAR" property="sdNote" />
+    <result column="SD_RONO" jdbcType="VARCHAR" property="sdRono" />
+    <result column="DTL_ITEMTYPE" jdbcType="DECIMAL" property="dtlItemtype" />
+    <result column="DTL_ITEMID" jdbcType="DECIMAL" property="dtlItemid" />
+    <result column="DTL_ITEMDESCR" jdbcType="VARCHAR" property="dtlItemdescr" />
+    <result column="DTL_OBJSELECT" jdbcType="VARCHAR" property="dtlObjselect" />
+    <result column="DTL_ITEMUOM" jdbcType="DECIMAL" property="dtlItemuom" />
+    <result column="SD_RO_ID" jdbcType="DECIMAL" property="sdRoId" />
+    <result column="SD_RO_NO" jdbcType="VARCHAR" property="sdRoNo" />
+    <result column="SD_RO_DTLID" jdbcType="DECIMAL" property="sdRoDtlid" />
+    <result column="SD_PRESETTLEDATE" jdbcType="TIMESTAMP" property="sdPresettledate" />
+    <result column="SD_CD_IDS" jdbcType="VARCHAR" property="sdCdIds" />
+    <result column="SD_IS_HANDWORK" jdbcType="DECIMAL" property="sdIsHandwork" />
+    <result column="SD_SOURCE_SR_DTLID" jdbcType="DECIMAL" property="sdSourceSrDtlid" />
+    <result column="SD_TAXRATE" jdbcType="DECIMAL" property="sdTaxrate" />
+    <result column="DTL_ITEMQTY" jdbcType="DECIMAL" property="dtlItemqty" />
+    <result column="SD_PAYDATE" jdbcType="TIMESTAMP" property="sdPaydate" />
+    <result column="SD_PRICEDESCR" jdbcType="VARCHAR" property="sdPricedescr" />
+    <result column="SD_CHARGECLASS" jdbcType="DECIMAL" property="sdChargeclass" />
+    <result column="SD_PAYMENTTYPE" jdbcType="DECIMAL" property="sdPaymenttype" />
+    <result column="SD_SETTLEAMOUNT" jdbcType="DECIMAL" property="sdSettleamount" />
+    <result column="SD_UPTODATE" jdbcType="TIMESTAMP" property="sdUptodate" />
+    <result column="SD_PROJECT" jdbcType="VARCHAR" property="sdProject" />
+    <result column="SD_STAFFID" jdbcType="DECIMAL" property="sdStaffid" />
+    <result column="SD_CHARGESIGNBY" jdbcType="VARCHAR" property="sdChargesignby" />
+    <result column="SD_CHARGESIGNBY_IDCARDNO" jdbcType="VARCHAR" property="sdChargesignbyIdcardno" />
+    <result column="SD_PAYPROPORTION" jdbcType="DECIMAL" property="sdPayproportion" />
+    <result column="SD_SOURCE_SPLIT_SR_DTLID" jdbcType="DECIMAL" property="sdSourceSplitSrDtlid" />
+    <result column="SD_SOURCE_DTLID" jdbcType="DECIMAL" property="sdSourceDtlid" />
+    <result column="SD_PRICEDESC" jdbcType="VARCHAR" property="sdPricedesc" />
+    <result column="SD_ENTRYEXITDESC" jdbcType="VARCHAR" property="sdEntryexitdesc" />
+    <result column="SD_STARTDATE_C" jdbcType="TIMESTAMP" property="sdStartdateC" />
+    <result column="SD_UPTODATE_C" jdbcType="TIMESTAMP" property="sdUptodateC" />
+    <result column="SD_RELCOST" jdbcType="DECIMAL" property="sdRelcost" />
+    <result column="TEMP" jdbcType="DECIMAL" property="temp" />
+    <result column="SD_STARTDATE_CHANGE" jdbcType="TIMESTAMP" property="sdStartdateChange" />
+    <result column="SD_UPTODATE_CHANGE" jdbcType="TIMESTAMP" property="sdUptodateChange" />
+    <result column="SD_AMOUNT_ADJ" jdbcType="DECIMAL" property="sdAmountAdj" />
+    <result column="SD_AMOUNT_ADJ1" jdbcType="DECIMAL" property="sdAmountAdj1" />
+    <result column="SD_AMOUNT_JUSTIFIED" jdbcType="DECIMAL" property="sdAmountJustified" />
+    <result column="SD_AMOUNT_CHANGE" jdbcType="DECIMAL" property="sdAmountChange" />
+    <result column="SD_AMOUNT_SETTLE" jdbcType="DECIMAL" property="sdAmountSettle" />
+    <result column="SD_AMOUNT_LAST" jdbcType="DECIMAL" property="sdAmountLast" />
+    <result column="SD_AMOUNT" jdbcType="DECIMAL" property="sdAmount" />
+    <result column="BADDEBT_AMOUNT" jdbcType="DECIMAL" property="baddebtAmount" />
+    <result column="ISRECOEDDOWN" jdbcType="DECIMAL" property="isrecoeddown" />
+    <result column="MACHINECODE" jdbcType="VARCHAR" property="machinecode" />
+    <result column="SD_INTERVALSEGMENT" jdbcType="VARCHAR" property="sdIntervalsegment" />
+    <result column="SD_AUTHORIZEDSIGNATORY" jdbcType="VARCHAR" property="sdAuthorizedsignatory" />
+    <result column="SYNCDATE" jdbcType="TIMESTAMP" property="syncdate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    BILLDTLID, BILLID, SD_ROID, SD_EQUORMATDESC, SD_EQUIPMENT, SD_MATERIAL, SD_MEASUREUNIT, 
+    SD_QTY, SD_CHARGETYPE, SD_STARTDATE, SD_ENDDATE, SD_NEXTSETTLEDATE, SD_PRICE, SD_CHARGEINFO, 
+    SD_NOTE, SD_RONO, DTL_ITEMTYPE, DTL_ITEMID, DTL_ITEMDESCR, DTL_OBJSELECT, DTL_ITEMUOM, 
+    SD_RO_ID, SD_RO_NO, SD_RO_DTLID, SD_PRESETTLEDATE, SD_CD_IDS, SD_IS_HANDWORK, SD_SOURCE_SR_DTLID, 
+    SD_TAXRATE, DTL_ITEMQTY, SD_PAYDATE, SD_PRICEDESCR, SD_CHARGECLASS, SD_PAYMENTTYPE, 
+    SD_SETTLEAMOUNT, SD_UPTODATE, SD_PROJECT, SD_STAFFID, SD_CHARGESIGNBY, SD_CHARGESIGNBY_IDCARDNO, 
+    SD_PAYPROPORTION, SD_SOURCE_SPLIT_SR_DTLID, SD_SOURCE_DTLID, SD_PRICEDESC, SD_ENTRYEXITDESC, 
+    SD_STARTDATE_C, SD_UPTODATE_C, SD_RELCOST, "TEMP", SD_STARTDATE_CHANGE, SD_UPTODATE_CHANGE, 
+    SD_AMOUNT_ADJ, SD_AMOUNT_ADJ1, SD_AMOUNT_JUSTIFIED, SD_AMOUNT_CHANGE, SD_AMOUNT_SETTLE, 
+    SD_AMOUNT_LAST, SD_AMOUNT, BADDEBT_AMOUNT, ISRECOEDDOWN, MACHINECODE, SD_INTERVALSEGMENT, 
+    SD_AUTHORIZEDSIGNATORY, SYNCDATE
+  </sql>
+  <insert id="insert" parameterType="com.thunder.money.entity.ScmHx07SettlereceivableSd">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLE_SD (BILLDTLID, BILLID, SD_ROID, 
+      SD_EQUORMATDESC, SD_EQUIPMENT, SD_MATERIAL, 
+      SD_MEASUREUNIT, SD_QTY, SD_CHARGETYPE, 
+      SD_STARTDATE, SD_ENDDATE, SD_NEXTSETTLEDATE, 
+      SD_PRICE, SD_CHARGEINFO, SD_NOTE, 
+      SD_RONO, DTL_ITEMTYPE, DTL_ITEMID, 
+      DTL_ITEMDESCR, DTL_OBJSELECT, DTL_ITEMUOM, 
+      SD_RO_ID, SD_RO_NO, SD_RO_DTLID, 
+      SD_PRESETTLEDATE, SD_CD_IDS, SD_IS_HANDWORK, 
+      SD_SOURCE_SR_DTLID, SD_TAXRATE, DTL_ITEMQTY, 
+      SD_PAYDATE, SD_PRICEDESCR, SD_CHARGECLASS, 
+      SD_PAYMENTTYPE, SD_SETTLEAMOUNT, SD_UPTODATE, 
+      SD_PROJECT, SD_STAFFID, SD_CHARGESIGNBY, 
+      SD_CHARGESIGNBY_IDCARDNO, SD_PAYPROPORTION, 
+      SD_SOURCE_SPLIT_SR_DTLID, SD_SOURCE_DTLID, SD_PRICEDESC, 
+      SD_ENTRYEXITDESC, SD_STARTDATE_C, SD_UPTODATE_C, 
+      SD_RELCOST, "TEMP", SD_STARTDATE_CHANGE, 
+      SD_UPTODATE_CHANGE, SD_AMOUNT_ADJ, SD_AMOUNT_ADJ1, 
+      SD_AMOUNT_JUSTIFIED, SD_AMOUNT_CHANGE, SD_AMOUNT_SETTLE, 
+      SD_AMOUNT_LAST, SD_AMOUNT, BADDEBT_AMOUNT, 
+      ISRECOEDDOWN, MACHINECODE, SD_INTERVALSEGMENT, 
+      SD_AUTHORIZEDSIGNATORY, SYNCDATE)
+    values (#{billdtlid,jdbcType=DECIMAL}, #{billid,jdbcType=DECIMAL}, #{sdRoid,jdbcType=DECIMAL}, 
+      #{sdEquormatdesc,jdbcType=VARCHAR}, #{sdEquipment,jdbcType=VARCHAR}, #{sdMaterial,jdbcType=DECIMAL}, 
+      #{sdMeasureunit,jdbcType=DECIMAL}, #{sdQty,jdbcType=DECIMAL}, #{sdChargetype,jdbcType=DECIMAL}, 
+      #{sdStartdate,jdbcType=TIMESTAMP}, #{sdEnddate,jdbcType=TIMESTAMP}, #{sdNextsettledate,jdbcType=TIMESTAMP}, 
+      #{sdPrice,jdbcType=DECIMAL}, #{sdChargeinfo,jdbcType=VARCHAR}, #{sdNote,jdbcType=VARCHAR}, 
+      #{sdRono,jdbcType=VARCHAR}, #{dtlItemtype,jdbcType=DECIMAL}, #{dtlItemid,jdbcType=DECIMAL}, 
+      #{dtlItemdescr,jdbcType=VARCHAR}, #{dtlObjselect,jdbcType=VARCHAR}, #{dtlItemuom,jdbcType=DECIMAL}, 
+      #{sdRoId,jdbcType=DECIMAL}, #{sdRoNo,jdbcType=VARCHAR}, #{sdRoDtlid,jdbcType=DECIMAL}, 
+      #{sdPresettledate,jdbcType=TIMESTAMP}, #{sdCdIds,jdbcType=VARCHAR}, #{sdIsHandwork,jdbcType=DECIMAL}, 
+      #{sdSourceSrDtlid,jdbcType=DECIMAL}, #{sdTaxrate,jdbcType=DECIMAL}, #{dtlItemqty,jdbcType=DECIMAL}, 
+      #{sdPaydate,jdbcType=TIMESTAMP}, #{sdPricedescr,jdbcType=VARCHAR}, #{sdChargeclass,jdbcType=DECIMAL}, 
+      #{sdPaymenttype,jdbcType=DECIMAL}, #{sdSettleamount,jdbcType=DECIMAL}, #{sdUptodate,jdbcType=TIMESTAMP}, 
+      #{sdProject,jdbcType=VARCHAR}, #{sdStaffid,jdbcType=DECIMAL}, #{sdChargesignby,jdbcType=VARCHAR}, 
+      #{sdChargesignbyIdcardno,jdbcType=VARCHAR}, #{sdPayproportion,jdbcType=DECIMAL}, 
+      #{sdSourceSplitSrDtlid,jdbcType=DECIMAL}, #{sdSourceDtlid,jdbcType=DECIMAL}, #{sdPricedesc,jdbcType=VARCHAR}, 
+      #{sdEntryexitdesc,jdbcType=VARCHAR}, #{sdStartdateC,jdbcType=TIMESTAMP}, #{sdUptodateC,jdbcType=TIMESTAMP}, 
+      #{sdRelcost,jdbcType=DECIMAL}, #{temp,jdbcType=DECIMAL}, #{sdStartdateChange,jdbcType=TIMESTAMP}, 
+      #{sdUptodateChange,jdbcType=TIMESTAMP}, #{sdAmountAdj,jdbcType=DECIMAL}, #{sdAmountAdj1,jdbcType=DECIMAL}, 
+      #{sdAmountJustified,jdbcType=DECIMAL}, #{sdAmountChange,jdbcType=DECIMAL}, #{sdAmountSettle,jdbcType=DECIMAL}, 
+      #{sdAmountLast,jdbcType=DECIMAL}, #{sdAmount,jdbcType=DECIMAL}, #{baddebtAmount,jdbcType=DECIMAL}, 
+      #{isrecoeddown,jdbcType=DECIMAL}, #{machinecode,jdbcType=VARCHAR}, #{sdIntervalsegment,jdbcType=VARCHAR}, 
+      #{sdAuthorizedsignatory,jdbcType=VARCHAR}, #{syncdate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.thunder.money.entity.ScmHx07SettlereceivableSd">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLE_SD
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="billdtlid != null">
+        BILLDTLID,
+      </if>
+      <if test="billid != null">
+        BILLID,
+      </if>
+      <if test="sdRoid != null">
+        SD_ROID,
+      </if>
+      <if test="sdEquormatdesc != null">
+        SD_EQUORMATDESC,
+      </if>
+      <if test="sdEquipment != null">
+        SD_EQUIPMENT,
+      </if>
+      <if test="sdMaterial != null">
+        SD_MATERIAL,
+      </if>
+      <if test="sdMeasureunit != null">
+        SD_MEASUREUNIT,
+      </if>
+      <if test="sdQty != null">
+        SD_QTY,
+      </if>
+      <if test="sdChargetype != null">
+        SD_CHARGETYPE,
+      </if>
+      <if test="sdStartdate != null">
+        SD_STARTDATE,
+      </if>
+      <if test="sdEnddate != null">
+        SD_ENDDATE,
+      </if>
+      <if test="sdNextsettledate != null">
+        SD_NEXTSETTLEDATE,
+      </if>
+      <if test="sdPrice != null">
+        SD_PRICE,
+      </if>
+      <if test="sdChargeinfo != null">
+        SD_CHARGEINFO,
+      </if>
+      <if test="sdNote != null">
+        SD_NOTE,
+      </if>
+      <if test="sdRono != null">
+        SD_RONO,
+      </if>
+      <if test="dtlItemtype != null">
+        DTL_ITEMTYPE,
+      </if>
+      <if test="dtlItemid != null">
+        DTL_ITEMID,
+      </if>
+      <if test="dtlItemdescr != null">
+        DTL_ITEMDESCR,
+      </if>
+      <if test="dtlObjselect != null">
+        DTL_OBJSELECT,
+      </if>
+      <if test="dtlItemuom != null">
+        DTL_ITEMUOM,
+      </if>
+      <if test="sdRoId != null">
+        SD_RO_ID,
+      </if>
+      <if test="sdRoNo != null">
+        SD_RO_NO,
+      </if>
+      <if test="sdRoDtlid != null">
+        SD_RO_DTLID,
+      </if>
+      <if test="sdPresettledate != null">
+        SD_PRESETTLEDATE,
+      </if>
+      <if test="sdCdIds != null">
+        SD_CD_IDS,
+      </if>
+      <if test="sdIsHandwork != null">
+        SD_IS_HANDWORK,
+      </if>
+      <if test="sdSourceSrDtlid != null">
+        SD_SOURCE_SR_DTLID,
+      </if>
+      <if test="sdTaxrate != null">
+        SD_TAXRATE,
+      </if>
+      <if test="dtlItemqty != null">
+        DTL_ITEMQTY,
+      </if>
+      <if test="sdPaydate != null">
+        SD_PAYDATE,
+      </if>
+      <if test="sdPricedescr != null">
+        SD_PRICEDESCR,
+      </if>
+      <if test="sdChargeclass != null">
+        SD_CHARGECLASS,
+      </if>
+      <if test="sdPaymenttype != null">
+        SD_PAYMENTTYPE,
+      </if>
+      <if test="sdSettleamount != null">
+        SD_SETTLEAMOUNT,
+      </if>
+      <if test="sdUptodate != null">
+        SD_UPTODATE,
+      </if>
+      <if test="sdProject != null">
+        SD_PROJECT,
+      </if>
+      <if test="sdStaffid != null">
+        SD_STAFFID,
+      </if>
+      <if test="sdChargesignby != null">
+        SD_CHARGESIGNBY,
+      </if>
+      <if test="sdChargesignbyIdcardno != null">
+        SD_CHARGESIGNBY_IDCARDNO,
+      </if>
+      <if test="sdPayproportion != null">
+        SD_PAYPROPORTION,
+      </if>
+      <if test="sdSourceSplitSrDtlid != null">
+        SD_SOURCE_SPLIT_SR_DTLID,
+      </if>
+      <if test="sdSourceDtlid != null">
+        SD_SOURCE_DTLID,
+      </if>
+      <if test="sdPricedesc != null">
+        SD_PRICEDESC,
+      </if>
+      <if test="sdEntryexitdesc != null">
+        SD_ENTRYEXITDESC,
+      </if>
+      <if test="sdStartdateC != null">
+        SD_STARTDATE_C,
+      </if>
+      <if test="sdUptodateC != null">
+        SD_UPTODATE_C,
+      </if>
+      <if test="sdRelcost != null">
+        SD_RELCOST,
+      </if>
+      <if test="temp != null">
+        "TEMP",
+      </if>
+      <if test="sdStartdateChange != null">
+        SD_STARTDATE_CHANGE,
+      </if>
+      <if test="sdUptodateChange != null">
+        SD_UPTODATE_CHANGE,
+      </if>
+      <if test="sdAmountAdj != null">
+        SD_AMOUNT_ADJ,
+      </if>
+      <if test="sdAmountAdj1 != null">
+        SD_AMOUNT_ADJ1,
+      </if>
+      <if test="sdAmountJustified != null">
+        SD_AMOUNT_JUSTIFIED,
+      </if>
+      <if test="sdAmountChange != null">
+        SD_AMOUNT_CHANGE,
+      </if>
+      <if test="sdAmountSettle != null">
+        SD_AMOUNT_SETTLE,
+      </if>
+      <if test="sdAmountLast != null">
+        SD_AMOUNT_LAST,
+      </if>
+      <if test="sdAmount != null">
+        SD_AMOUNT,
+      </if>
+      <if test="baddebtAmount != null">
+        BADDEBT_AMOUNT,
+      </if>
+      <if test="isrecoeddown != null">
+        ISRECOEDDOWN,
+      </if>
+      <if test="machinecode != null">
+        MACHINECODE,
+      </if>
+      <if test="sdIntervalsegment != null">
+        SD_INTERVALSEGMENT,
+      </if>
+      <if test="sdAuthorizedsignatory != null">
+        SD_AUTHORIZEDSIGNATORY,
+      </if>
+      <if test="syncdate != null">
+        SYNCDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="billdtlid != null">
+        #{billdtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="billid != null">
+        #{billid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdRoid != null">
+        #{sdRoid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdEquormatdesc != null">
+        #{sdEquormatdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="sdEquipment != null">
+        #{sdEquipment,jdbcType=VARCHAR},
+      </if>
+      <if test="sdMaterial != null">
+        #{sdMaterial,jdbcType=DECIMAL},
+      </if>
+      <if test="sdMeasureunit != null">
+        #{sdMeasureunit,jdbcType=DECIMAL},
+      </if>
+      <if test="sdQty != null">
+        #{sdQty,jdbcType=DECIMAL},
+      </if>
+      <if test="sdChargetype != null">
+        #{sdChargetype,jdbcType=DECIMAL},
+      </if>
+      <if test="sdStartdate != null">
+        #{sdStartdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdEnddate != null">
+        #{sdEnddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdNextsettledate != null">
+        #{sdNextsettledate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdPrice != null">
+        #{sdPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="sdChargeinfo != null">
+        #{sdChargeinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="sdNote != null">
+        #{sdNote,jdbcType=VARCHAR},
+      </if>
+      <if test="sdRono != null">
+        #{sdRono,jdbcType=VARCHAR},
+      </if>
+      <if test="dtlItemtype != null">
+        #{dtlItemtype,jdbcType=DECIMAL},
+      </if>
+      <if test="dtlItemid != null">
+        #{dtlItemid,jdbcType=DECIMAL},
+      </if>
+      <if test="dtlItemdescr != null">
+        #{dtlItemdescr,jdbcType=VARCHAR},
+      </if>
+      <if test="dtlObjselect != null">
+        #{dtlObjselect,jdbcType=VARCHAR},
+      </if>
+      <if test="dtlItemuom != null">
+        #{dtlItemuom,jdbcType=DECIMAL},
+      </if>
+      <if test="sdRoId != null">
+        #{sdRoId,jdbcType=DECIMAL},
+      </if>
+      <if test="sdRoNo != null">
+        #{sdRoNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sdRoDtlid != null">
+        #{sdRoDtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdPresettledate != null">
+        #{sdPresettledate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdCdIds != null">
+        #{sdCdIds,jdbcType=VARCHAR},
+      </if>
+      <if test="sdIsHandwork != null">
+        #{sdIsHandwork,jdbcType=DECIMAL},
+      </if>
+      <if test="sdSourceSrDtlid != null">
+        #{sdSourceSrDtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdTaxrate != null">
+        #{sdTaxrate,jdbcType=DECIMAL},
+      </if>
+      <if test="dtlItemqty != null">
+        #{dtlItemqty,jdbcType=DECIMAL},
+      </if>
+      <if test="sdPaydate != null">
+        #{sdPaydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdPricedescr != null">
+        #{sdPricedescr,jdbcType=VARCHAR},
+      </if>
+      <if test="sdChargeclass != null">
+        #{sdChargeclass,jdbcType=DECIMAL},
+      </if>
+      <if test="sdPaymenttype != null">
+        #{sdPaymenttype,jdbcType=DECIMAL},
+      </if>
+      <if test="sdSettleamount != null">
+        #{sdSettleamount,jdbcType=DECIMAL},
+      </if>
+      <if test="sdUptodate != null">
+        #{sdUptodate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdProject != null">
+        #{sdProject,jdbcType=VARCHAR},
+      </if>
+      <if test="sdStaffid != null">
+        #{sdStaffid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdChargesignby != null">
+        #{sdChargesignby,jdbcType=VARCHAR},
+      </if>
+      <if test="sdChargesignbyIdcardno != null">
+        #{sdChargesignbyIdcardno,jdbcType=VARCHAR},
+      </if>
+      <if test="sdPayproportion != null">
+        #{sdPayproportion,jdbcType=DECIMAL},
+      </if>
+      <if test="sdSourceSplitSrDtlid != null">
+        #{sdSourceSplitSrDtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdSourceDtlid != null">
+        #{sdSourceDtlid,jdbcType=DECIMAL},
+      </if>
+      <if test="sdPricedesc != null">
+        #{sdPricedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="sdEntryexitdesc != null">
+        #{sdEntryexitdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="sdStartdateC != null">
+        #{sdStartdateC,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdUptodateC != null">
+        #{sdUptodateC,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdRelcost != null">
+        #{sdRelcost,jdbcType=DECIMAL},
+      </if>
+      <if test="temp != null">
+        #{temp,jdbcType=DECIMAL},
+      </if>
+      <if test="sdStartdateChange != null">
+        #{sdStartdateChange,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdUptodateChange != null">
+        #{sdUptodateChange,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdAmountAdj != null">
+        #{sdAmountAdj,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmountAdj1 != null">
+        #{sdAmountAdj1,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmountJustified != null">
+        #{sdAmountJustified,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmountChange != null">
+        #{sdAmountChange,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmountSettle != null">
+        #{sdAmountSettle,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmountLast != null">
+        #{sdAmountLast,jdbcType=DECIMAL},
+      </if>
+      <if test="sdAmount != null">
+        #{sdAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="baddebtAmount != null">
+        #{baddebtAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="isrecoeddown != null">
+        #{isrecoeddown,jdbcType=DECIMAL},
+      </if>
+      <if test="machinecode != null">
+        #{machinecode,jdbcType=VARCHAR},
+      </if>
+      <if test="sdIntervalsegment != null">
+        #{sdIntervalsegment,jdbcType=VARCHAR},
+      </if>
+      <if test="sdAuthorizedsignatory != null">
+        #{sdAuthorizedsignatory,jdbcType=VARCHAR},
+      </if>
+      <if test="syncdate != null">
+        #{syncdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

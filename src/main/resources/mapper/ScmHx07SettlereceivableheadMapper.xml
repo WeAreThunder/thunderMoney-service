@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thunder.money.mapper.ScmHx07SettlereceivableheadMapper">
+  <resultMap id="BaseResultMap" type="com.thunder.money.entity.ScmHx07Settlereceivablehead">
+    <!--@mbg.generated-->
+    <!--@Table SCM_HX07_SETTLERECEIVABLEHEAD-->
+    <result column="BILLID" jdbcType="DECIMAL" property="billid" />
+    <result column="BILLTYPE" jdbcType="DECIMAL" property="billtype" />
+    <result column="SEQUENCE" jdbcType="DECIMAL" property="sequence" />
+    <result column="MONTH" jdbcType="VARCHAR" property="month" />
+    <result column="NO" jdbcType="VARCHAR" property="no" />
+    <result column="BILLDATE" jdbcType="TIMESTAMP" property="billdate" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="CORPID" jdbcType="DECIMAL" property="corpid" />
+    <result column="MAKER" jdbcType="DECIMAL" property="maker" />
+    <result column="MENDER" jdbcType="DECIMAL" property="mender" />
+    <result column="CHECKER" jdbcType="DECIMAL" property="checker" />
+    <result column="MAKEDATE" jdbcType="TIMESTAMP" property="makedate" />
+    <result column="EDITDATE" jdbcType="TIMESTAMP" property="editdate" />
+    <result column="CHECKDATETIME" jdbcType="TIMESTAMP" property="checkdatetime" />
+    <result column="CUSTOMER" jdbcType="DECIMAL" property="customer" />
+    <result column="BIZHONG" jdbcType="DECIMAL" property="bizhong" />
+    <result column="SETTLEDATE" jdbcType="TIMESTAMP" property="settledate" />
+    <result column="SETTLEDESC" jdbcType="VARCHAR" property="settledesc" />
+    <result column="NOTE" jdbcType="VARCHAR" property="note" />
+    <result column="BIZ_UNIT" jdbcType="DECIMAL" property="bizUnit" />
+    <result column="BIZ_AREA" jdbcType="DECIMAL" property="bizArea" />
+    <result column="SHOP" jdbcType="DECIMAL" property="shop" />
+    <result column="RENTING_CUST" jdbcType="DECIMAL" property="rentingCust" />
+    <result column="CONTRACT_CUST" jdbcType="DECIMAL" property="contractCust" />
+    <result column="SALES_MAN" jdbcType="DECIMAL" property="salesMan" />
+    <result column="ENDDATE" jdbcType="TIMESTAMP" property="enddate" />
+    <result column="SOURCE_SR_ID" jdbcType="DECIMAL" property="sourceSrId" />
+    <result column="SOURCE_SR_NO" jdbcType="DECIMAL" property="sourceSrNo" />
+    <result column="BAT_YES" jdbcType="DECIMAL" property="batYes" />
+    <result column="BAT_NO" jdbcType="DECIMAL" property="batNo" />
+    <result column="ISCHANGE" jdbcType="DECIMAL" property="ischange" />
+    <result column="SOURCE_SR" jdbcType="VARCHAR" property="sourceSr" />
+    <result column="BILLTITLE" jdbcType="VARCHAR" property="billtitle" />
+    <result column="BILLDESCR" jdbcType="VARCHAR" property="billdescr" />
+    <result column="BIZ_SHOP" jdbcType="DECIMAL" property="bizShop" />
+    <result column="PAYDATE" jdbcType="TIMESTAMP" property="paydate" />
+    <result column="ISDERATE" jdbcType="DECIMAL" property="isderate" />
+    <result column="BAK" jdbcType="VARCHAR" property="bak" />
+    <result column="RO_ID" jdbcType="DECIMAL" property="roId" />
+    <result column="RO_NOS" jdbcType="VARCHAR" property="roNos" />
+    <result column="RO_PRJS" jdbcType="VARCHAR" property="roPrjs" />
+    <result column="LESSEE" jdbcType="DECIMAL" property="lessee" />
+    <result column="CUSCONFIRM" jdbcType="DECIMAL" property="cusconfirm" />
+    <result column="CUSCONFIRMDATE" jdbcType="TIMESTAMP" property="cusconfirmdate" />
+    <result column="CUSCONFIRMSTAFF" jdbcType="DECIMAL" property="cusconfirmstaff" />
+    <result column="ISAUTOCREAT" jdbcType="DECIMAL" property="isautocreat" />
+    <result column="VOUCHERVERSION" jdbcType="DECIMAL" property="voucherversion" />
+    <result column="DEPOSITAMOUNT" jdbcType="DECIMAL" property="depositamount" />
+    <result column="SOURCE_SPLIT_SR_ID" jdbcType="DECIMAL" property="sourceSplitSrId" />
+    <result column="ISNEEDSPLIT" jdbcType="DECIMAL" property="isneedsplit" />
+    <result column="ISSPLIT" jdbcType="DECIMAL" property="issplit" />
+    <result column="TRANSFORAMOUNT" jdbcType="DECIMAL" property="transforamount" />
+    <result column="IMPORTDATE" jdbcType="TIMESTAMP" property="importdate" />
+    <result column="SOURCEFILE" jdbcType="VARCHAR" property="sourcefile" />
+    <result column="BIZ_COMPANY" jdbcType="DECIMAL" property="bizCompany" />
+    <result column="SOURCETYPE" jdbcType="DECIMAL" property="sourcetype" />
+    <result column="CUSCONFIRMNOTES" jdbcType="VARCHAR" property="cusconfirmnotes" />
+    <result column="YEAR" jdbcType="VARCHAR" property="year" />
+    <result column="SAP_NO" jdbcType="VARCHAR" property="sapNo" />
+    <result column="SAP_NO_PREFAB" jdbcType="VARCHAR" property="sapNoPrefab" />
+    <result column="SAPERROR" jdbcType="VARCHAR" property="saperror" />
+    <result column="SAP_MSG_NO" jdbcType="VARCHAR" property="sapMsgNo" />
+    <result column="YEAR_RED" jdbcType="VARCHAR" property="yearRed" />
+    <result column="SAP_NO_RED" jdbcType="VARCHAR" property="sapNoRed" />
+    <result column="SAP_NO_PREFAB_RED" jdbcType="VARCHAR" property="sapNoPrefabRed" />
+    <result column="SAP_MSG_NO_RED" jdbcType="VARCHAR" property="sapMsgNoRed" />
+    <result column="SAPERROR_RED" jdbcType="VARCHAR" property="saperrorRed" />
+    <result column="BLUEBILLDATE" jdbcType="TIMESTAMP" property="bluebilldate" />
+    <result column="REDBILLDATE" jdbcType="TIMESTAMP" property="redbilldate" />
+    <result column="PARENTBILLID" jdbcType="DECIMAL" property="parentbillid" />
+    <result column="VOUCHERPARENTBILLID" jdbcType="DECIMAL" property="voucherparentbillid" />
+    <result column="SAP_NO_BACK" jdbcType="VARCHAR" property="sapNoBack" />
+    <result column="VOUCHERVERSION1" jdbcType="DECIMAL" property="voucherversion1" />
+    <result column="SAP_MSG_NO_BACK" jdbcType="VARCHAR" property="sapMsgNoBack" />
+    <result column="SAPERROR_BACK" jdbcType="VARCHAR" property="saperrorBack" />
+    <result column="VOUCHERPARENTBILLID1" jdbcType="DECIMAL" property="voucherparentbillid1" />
+    <result column="ROINCOMEAMOUNT" jdbcType="DECIMAL" property="roincomeamount" />
+    <result column="DERATEPER" jdbcType="DECIMAL" property="derateper" />
+    <result column="CUSTOMERCONFIRMSTATUS" jdbcType="DECIMAL" property="customerconfirmstatus" />
+    <result column="SAP_NO_PREFAB2014" jdbcType="VARCHAR" property="sapNoPrefab2014" />
+    <result column="SAP_NO2014" jdbcType="VARCHAR" property="sapNo2014" />
+    <result column="SAP_MSG_NO2014" jdbcType="VARCHAR" property="sapMsgNo2014" />
+    <result column="ISFINANCERED" jdbcType="DECIMAL" property="isfinancered" />
+    <result column="FINANCEREDREASON" jdbcType="VARCHAR" property="financeredreason" />
+    <result column="FINANCEREDMARKER" jdbcType="DECIMAL" property="financeredmarker" />
+    <result column="FINANCEREDDATE" jdbcType="TIMESTAMP" property="financereddate" />
+    <result column="CHARGETYPE" jdbcType="DECIMAL" property="chargetype" />
+    <result column="ISOPTLACK" jdbcType="DECIMAL" property="isoptlack" />
+    <result column="SOURCE_SPLIT_SR_NO" jdbcType="VARCHAR" property="sourceSplitSrNo" />
+    <result column="CHARGEREASON" jdbcType="VARCHAR" property="chargereason" />
+    <result column="CONFIRMLASTSTATUS" jdbcType="DECIMAL" property="confirmlaststatus" />
+    <result column="ISNOTICE" jdbcType="DECIMAL" property="isnotice" />
+    <result column="CHECKERID" jdbcType="DECIMAL" property="checkerid" />
+    <result column="CHANGEREASON" jdbcType="DECIMAL" property="changereason" />
+    <result column="FIRST_RO_ID" jdbcType="DECIMAL" property="firstRoId" />
+    <result column="ISCHECKSHOPMAN" jdbcType="DECIMAL" property="ischeckshopman" />
+    <result column="CUSTOMERCONFIRMSTATUSCOPY" jdbcType="DECIMAL" property="customerconfirmstatuscopy" />
+    <result column="RENTING_CUSTNAME" jdbcType="VARCHAR" property="rentingCustname" />
+    <result column="PUSHEDNO" jdbcType="VARCHAR" property="pushedno" />
+    <result column="WARDEN" jdbcType="VARCHAR" property="warden" />
+    <result column="HXSHOPCUSNOTE" jdbcType="DECIMAL" property="hxshopcusnote" />
+    <result column="CUSCONFIRMAMTCOPY" jdbcType="DECIMAL" property="cusconfirmamtcopy" />
+    <result column="TOTALAMOUNT" jdbcType="DECIMAL" property="totalamount" />
+    <result column="CUSCONFIRMAMT" jdbcType="DECIMAL" property="cusconfirmamt" />
+    <result column="TOTALCHANGEAMOUNT" jdbcType="DECIMAL" property="totalchangeamount" />
+    <result column="ISAHEAD" jdbcType="DECIMAL" property="isahead" />
+    <result column="ISADVANCE" jdbcType="DECIMAL" property="isadvance" />
+    <result column="NOTINVOICEDAMOUNT" jdbcType="DECIMAL" property="notinvoicedamount" />
+    <result column="CUSLEVEL" jdbcType="DECIMAL" property="cuslevel" />
+    <result column="ISSENDHXSHOP" jdbcType="DECIMAL" property="issendhxshop" />
+    <result column="SIGNINGWAY" jdbcType="DECIMAL" property="signingway" />
+    <result column="SIGNINGSEQUENCE" jdbcType="DECIMAL" property="signingsequence" />
+    <result column="PDFURL" jdbcType="VARCHAR" property="pdfurl" />
+    <result column="CONTRACTID" jdbcType="DECIMAL" property="contractid" />
+    <result column="SETTLERECORDID" jdbcType="DECIMAL" property="settlerecordid" />
+    <result column="STAFFID" jdbcType="DECIMAL" property="staffid" />
+    <result column="SAP_EBANKNO" jdbcType="VARCHAR" property="sapEbankno" />
+    <result column="SETTLERECORDID_NEWEST" jdbcType="DECIMAL" property="settlerecordidNewest" />
+    <result column="SYNCDATE" jdbcType="TIMESTAMP" property="syncdate" />
+    <result column="OPERATIONS" jdbcType="VARCHAR" property="operations" />
+    <result column="OPERATIONSNAME" jdbcType="VARCHAR" property="operationsname" />
+    <result column="LASTAUDIT_RCHECKER" jdbcType="DECIMAL" property="lastauditRchecker" />
+    <result column="LASTAUDIT_RTIME" jdbcType="TIMESTAMP" property="lastauditRtime" />
+    <result column="SDKBACK" jdbcType="DECIMAL" property="sdkback" />
+    <result column="SIGNTYPE" jdbcType="DECIMAL" property="signtype" />
+    <result column="SIGN_STARTTIME" jdbcType="TIMESTAMP" property="signStarttime" />
+    <result column="SIGN_ENDTIME" jdbcType="TIMESTAMP" property="signEndtime" />
+    <result column="SIGNNO" jdbcType="VARCHAR" property="signno" />
+    <result column="SIGNID" jdbcType="DECIMAL" property="signid" />
+    <result column="SIGNUSER" jdbcType="VARCHAR" property="signuser" />
+    <result column="SPECIFICREASON" jdbcType="VARCHAR" property="specificreason" />
+    <result column="REVIEWSTRTUS" jdbcType="DECIMAL" property="reviewstrtus" />
+    <result column="SIGNID_COPY" jdbcType="DECIMAL" property="signidCopy" />
+    <result column="BUILDHX07_SETTLETYPE" jdbcType="DECIMAL" property="buildhx07Settletype" />
+    <result column="CUSCONFIRMDATE_COPY" jdbcType="TIMESTAMP" property="cusconfirmdateCopy" />
+    <result column="SIGN_STARTTIME_COPY" jdbcType="TIMESTAMP" property="signStarttimeCopy" />
+    <result column="SIGNNO_COPY" jdbcType="VARCHAR" property="signnoCopy" />
+    <result column="UNIONSETTLE_JSON" jdbcType="VARCHAR" property="unionsettleJson" />
+    <result column="SHOWSOURCETYPE" jdbcType="DECIMAL" property="showsourcetype" />
+    <result column="MANUALASSOCIATED" jdbcType="DECIMAL" property="manualassociated" />
+    <result column="CREATETYPE" jdbcType="DECIMAL" property="createtype" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    BILLID, BILLTYPE, "SEQUENCE", "MONTH", "NO", BILLDATE, "STATUS", CORPID, MAKER, MENDER, 
+    CHECKER, MAKEDATE, EDITDATE, CHECKDATETIME, CUSTOMER, BIZHONG, SETTLEDATE, SETTLEDESC, 
+    NOTE, BIZ_UNIT, BIZ_AREA, SHOP, RENTING_CUST, CONTRACT_CUST, SALES_MAN, ENDDATE, 
+    SOURCE_SR_ID, SOURCE_SR_NO, BAT_YES, BAT_NO, ISCHANGE, SOURCE_SR, BILLTITLE, BILLDESCR, 
+    BIZ_SHOP, PAYDATE, ISDERATE, BAK, RO_ID, RO_NOS, RO_PRJS, LESSEE, CUSCONFIRM, CUSCONFIRMDATE, 
+    CUSCONFIRMSTAFF, ISAUTOCREAT, VOUCHERVERSION, DEPOSITAMOUNT, SOURCE_SPLIT_SR_ID, 
+    ISNEEDSPLIT, ISSPLIT, TRANSFORAMOUNT, IMPORTDATE, SOURCEFILE, BIZ_COMPANY, SOURCETYPE, 
+    CUSCONFIRMNOTES, "YEAR", SAP_NO, SAP_NO_PREFAB, SAPERROR, SAP_MSG_NO, YEAR_RED, SAP_NO_RED, 
+    SAP_NO_PREFAB_RED, SAP_MSG_NO_RED, SAPERROR_RED, BLUEBILLDATE, REDBILLDATE, PARENTBILLID, 
+    VOUCHERPARENTBILLID, SAP_NO_BACK, VOUCHERVERSION1, SAP_MSG_NO_BACK, SAPERROR_BACK, 
+    VOUCHERPARENTBILLID1, ROINCOMEAMOUNT, DERATEPER, CUSTOMERCONFIRMSTATUS, SAP_NO_PREFAB2014, 
+    SAP_NO2014, SAP_MSG_NO2014, ISFINANCERED, FINANCEREDREASON, FINANCEREDMARKER, FINANCEREDDATE, 
+    CHARGETYPE, ISOPTLACK, SOURCE_SPLIT_SR_NO, CHARGEREASON, CONFIRMLASTSTATUS, ISNOTICE, 
+    CHECKERID, CHANGEREASON, FIRST_RO_ID, ISCHECKSHOPMAN, CUSTOMERCONFIRMSTATUSCOPY, 
+    RENTING_CUSTNAME, PUSHEDNO, WARDEN, HXSHOPCUSNOTE, CUSCONFIRMAMTCOPY, TOTALAMOUNT, 
+    CUSCONFIRMAMT, TOTALCHANGEAMOUNT, ISAHEAD, ISADVANCE, NOTINVOICEDAMOUNT, CUSLEVEL, 
+    ISSENDHXSHOP, SIGNINGWAY, SIGNINGSEQUENCE, PDFURL, CONTRACTID, SETTLERECORDID, STAFFID, 
+    SAP_EBANKNO, SETTLERECORDID_NEWEST, SYNCDATE, OPERATIONS, OPERATIONSNAME, LASTAUDIT_RCHECKER, 
+    LASTAUDIT_RTIME, SDKBACK, SIGNTYPE, SIGN_STARTTIME, SIGN_ENDTIME, SIGNNO, SIGNID, 
+    SIGNUSER, SPECIFICREASON, REVIEWSTRTUS, SIGNID_COPY, BUILDHX07_SETTLETYPE, CUSCONFIRMDATE_COPY, 
+    SIGN_STARTTIME_COPY, SIGNNO_COPY, UNIONSETTLE_JSON, SHOWSOURCETYPE, MANUALASSOCIATED, 
+    CREATETYPE
+  </sql>
+  <insert id="insert" parameterType="com.thunder.money.entity.ScmHx07Settlereceivablehead">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLEHEAD (BILLID, BILLTYPE, "SEQUENCE", 
+      "MONTH", "NO", BILLDATE, 
+      "STATUS", CORPID, MAKER, 
+      MENDER, CHECKER, MAKEDATE, 
+      EDITDATE, CHECKDATETIME, CUSTOMER, 
+      BIZHONG, SETTLEDATE, SETTLEDESC, 
+      NOTE, BIZ_UNIT, BIZ_AREA, 
+      SHOP, RENTING_CUST, CONTRACT_CUST, 
+      SALES_MAN, ENDDATE, SOURCE_SR_ID, 
+      SOURCE_SR_NO, BAT_YES, BAT_NO, 
+      ISCHANGE, SOURCE_SR, BILLTITLE, 
+      BILLDESCR, BIZ_SHOP, PAYDATE, 
+      ISDERATE, BAK, RO_ID, 
+      RO_NOS, RO_PRJS, LESSEE, 
+      CUSCONFIRM, CUSCONFIRMDATE, CUSCONFIRMSTAFF, 
+      ISAUTOCREAT, VOUCHERVERSION, DEPOSITAMOUNT, 
+      SOURCE_SPLIT_SR_ID, ISNEEDSPLIT, ISSPLIT, 
+      TRANSFORAMOUNT, IMPORTDATE, SOURCEFILE, 
+      BIZ_COMPANY, SOURCETYPE, CUSCONFIRMNOTES, 
+      "YEAR", SAP_NO, SAP_NO_PREFAB, 
+      SAPERROR, SAP_MSG_NO, YEAR_RED, 
+      SAP_NO_RED, SAP_NO_PREFAB_RED, SAP_MSG_NO_RED, 
+      SAPERROR_RED, BLUEBILLDATE, REDBILLDATE, 
+      PARENTBILLID, VOUCHERPARENTBILLID, SAP_NO_BACK, 
+      VOUCHERVERSION1, SAP_MSG_NO_BACK, SAPERROR_BACK, 
+      VOUCHERPARENTBILLID1, ROINCOMEAMOUNT, DERATEPER, 
+      CUSTOMERCONFIRMSTATUS, SAP_NO_PREFAB2014, 
+      SAP_NO2014, SAP_MSG_NO2014, ISFINANCERED, 
+      FINANCEREDREASON, FINANCEREDMARKER, FINANCEREDDATE, 
+      CHARGETYPE, ISOPTLACK, SOURCE_SPLIT_SR_NO, 
+      CHARGEREASON, CONFIRMLASTSTATUS, ISNOTICE, 
+      CHECKERID, CHANGEREASON, FIRST_RO_ID, 
+      ISCHECKSHOPMAN, CUSTOMERCONFIRMSTATUSCOPY, 
+      RENTING_CUSTNAME, PUSHEDNO, WARDEN, 
+      HXSHOPCUSNOTE, CUSCONFIRMAMTCOPY, TOTALAMOUNT, 
+      CUSCONFIRMAMT, TOTALCHANGEAMOUNT, ISAHEAD, 
+      ISADVANCE, NOTINVOICEDAMOUNT, CUSLEVEL, 
+      ISSENDHXSHOP, SIGNINGWAY, SIGNINGSEQUENCE, 
+      PDFURL, CONTRACTID, SETTLERECORDID, 
+      STAFFID, SAP_EBANKNO, SETTLERECORDID_NEWEST, 
+      SYNCDATE, OPERATIONS, OPERATIONSNAME, 
+      LASTAUDIT_RCHECKER, LASTAUDIT_RTIME, SDKBACK, 
+      SIGNTYPE, SIGN_STARTTIME, SIGN_ENDTIME, 
+      SIGNNO, SIGNID, SIGNUSER, 
+      SPECIFICREASON, REVIEWSTRTUS, SIGNID_COPY, 
+      BUILDHX07_SETTLETYPE, CUSCONFIRMDATE_COPY, 
+      SIGN_STARTTIME_COPY, SIGNNO_COPY, UNIONSETTLE_JSON, 
+      SHOWSOURCETYPE, MANUALASSOCIATED, CREATETYPE
+      )
+    values (#{billid,jdbcType=DECIMAL}, #{billtype,jdbcType=DECIMAL}, #{sequence,jdbcType=DECIMAL}, 
+      #{month,jdbcType=VARCHAR}, #{no,jdbcType=VARCHAR}, #{billdate,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=DECIMAL}, #{corpid,jdbcType=DECIMAL}, #{maker,jdbcType=DECIMAL}, 
+      #{mender,jdbcType=DECIMAL}, #{checker,jdbcType=DECIMAL}, #{makedate,jdbcType=TIMESTAMP}, 
+      #{editdate,jdbcType=TIMESTAMP}, #{checkdatetime,jdbcType=TIMESTAMP}, #{customer,jdbcType=DECIMAL}, 
+      #{bizhong,jdbcType=DECIMAL}, #{settledate,jdbcType=TIMESTAMP}, #{settledesc,jdbcType=VARCHAR}, 
+      #{note,jdbcType=VARCHAR}, #{bizUnit,jdbcType=DECIMAL}, #{bizArea,jdbcType=DECIMAL}, 
+      #{shop,jdbcType=DECIMAL}, #{rentingCust,jdbcType=DECIMAL}, #{contractCust,jdbcType=DECIMAL}, 
+      #{salesMan,jdbcType=DECIMAL}, #{enddate,jdbcType=TIMESTAMP}, #{sourceSrId,jdbcType=DECIMAL}, 
+      #{sourceSrNo,jdbcType=DECIMAL}, #{batYes,jdbcType=DECIMAL}, #{batNo,jdbcType=DECIMAL}, 
+      #{ischange,jdbcType=DECIMAL}, #{sourceSr,jdbcType=VARCHAR}, #{billtitle,jdbcType=VARCHAR}, 
+      #{billdescr,jdbcType=VARCHAR}, #{bizShop,jdbcType=DECIMAL}, #{paydate,jdbcType=TIMESTAMP}, 
+      #{isderate,jdbcType=DECIMAL}, #{bak,jdbcType=VARCHAR}, #{roId,jdbcType=DECIMAL}, 
+      #{roNos,jdbcType=VARCHAR}, #{roPrjs,jdbcType=VARCHAR}, #{lessee,jdbcType=DECIMAL}, 
+      #{cusconfirm,jdbcType=DECIMAL}, #{cusconfirmdate,jdbcType=TIMESTAMP}, #{cusconfirmstaff,jdbcType=DECIMAL}, 
+      #{isautocreat,jdbcType=DECIMAL}, #{voucherversion,jdbcType=DECIMAL}, #{depositamount,jdbcType=DECIMAL}, 
+      #{sourceSplitSrId,jdbcType=DECIMAL}, #{isneedsplit,jdbcType=DECIMAL}, #{issplit,jdbcType=DECIMAL}, 
+      #{transforamount,jdbcType=DECIMAL}, #{importdate,jdbcType=TIMESTAMP}, #{sourcefile,jdbcType=VARCHAR}, 
+      #{bizCompany,jdbcType=DECIMAL}, #{sourcetype,jdbcType=DECIMAL}, #{cusconfirmnotes,jdbcType=VARCHAR}, 
+      #{year,jdbcType=VARCHAR}, #{sapNo,jdbcType=VARCHAR}, #{sapNoPrefab,jdbcType=VARCHAR}, 
+      #{saperror,jdbcType=VARCHAR}, #{sapMsgNo,jdbcType=VARCHAR}, #{yearRed,jdbcType=VARCHAR}, 
+      #{sapNoRed,jdbcType=VARCHAR}, #{sapNoPrefabRed,jdbcType=VARCHAR}, #{sapMsgNoRed,jdbcType=VARCHAR}, 
+      #{saperrorRed,jdbcType=VARCHAR}, #{bluebilldate,jdbcType=TIMESTAMP}, #{redbilldate,jdbcType=TIMESTAMP}, 
+      #{parentbillid,jdbcType=DECIMAL}, #{voucherparentbillid,jdbcType=DECIMAL}, #{sapNoBack,jdbcType=VARCHAR}, 
+      #{voucherversion1,jdbcType=DECIMAL}, #{sapMsgNoBack,jdbcType=VARCHAR}, #{saperrorBack,jdbcType=VARCHAR}, 
+      #{voucherparentbillid1,jdbcType=DECIMAL}, #{roincomeamount,jdbcType=DECIMAL}, #{derateper,jdbcType=DECIMAL}, 
+      #{customerconfirmstatus,jdbcType=DECIMAL}, #{sapNoPrefab2014,jdbcType=VARCHAR}, 
+      #{sapNo2014,jdbcType=VARCHAR}, #{sapMsgNo2014,jdbcType=VARCHAR}, #{isfinancered,jdbcType=DECIMAL}, 
+      #{financeredreason,jdbcType=VARCHAR}, #{financeredmarker,jdbcType=DECIMAL}, #{financereddate,jdbcType=TIMESTAMP}, 
+      #{chargetype,jdbcType=DECIMAL}, #{isoptlack,jdbcType=DECIMAL}, #{sourceSplitSrNo,jdbcType=VARCHAR}, 
+      #{chargereason,jdbcType=VARCHAR}, #{confirmlaststatus,jdbcType=DECIMAL}, #{isnotice,jdbcType=DECIMAL}, 
+      #{checkerid,jdbcType=DECIMAL}, #{changereason,jdbcType=DECIMAL}, #{firstRoId,jdbcType=DECIMAL}, 
+      #{ischeckshopman,jdbcType=DECIMAL}, #{customerconfirmstatuscopy,jdbcType=DECIMAL}, 
+      #{rentingCustname,jdbcType=VARCHAR}, #{pushedno,jdbcType=VARCHAR}, #{warden,jdbcType=VARCHAR}, 
+      #{hxshopcusnote,jdbcType=DECIMAL}, #{cusconfirmamtcopy,jdbcType=DECIMAL}, #{totalamount,jdbcType=DECIMAL}, 
+      #{cusconfirmamt,jdbcType=DECIMAL}, #{totalchangeamount,jdbcType=DECIMAL}, #{isahead,jdbcType=DECIMAL}, 
+      #{isadvance,jdbcType=DECIMAL}, #{notinvoicedamount,jdbcType=DECIMAL}, #{cuslevel,jdbcType=DECIMAL}, 
+      #{issendhxshop,jdbcType=DECIMAL}, #{signingway,jdbcType=DECIMAL}, #{signingsequence,jdbcType=DECIMAL}, 
+      #{pdfurl,jdbcType=VARCHAR}, #{contractid,jdbcType=DECIMAL}, #{settlerecordid,jdbcType=DECIMAL}, 
+      #{staffid,jdbcType=DECIMAL}, #{sapEbankno,jdbcType=VARCHAR}, #{settlerecordidNewest,jdbcType=DECIMAL}, 
+      #{syncdate,jdbcType=TIMESTAMP}, #{operations,jdbcType=VARCHAR}, #{operationsname,jdbcType=VARCHAR}, 
+      #{lastauditRchecker,jdbcType=DECIMAL}, #{lastauditRtime,jdbcType=TIMESTAMP}, #{sdkback,jdbcType=DECIMAL}, 
+      #{signtype,jdbcType=DECIMAL}, #{signStarttime,jdbcType=TIMESTAMP}, #{signEndtime,jdbcType=TIMESTAMP}, 
+      #{signno,jdbcType=VARCHAR}, #{signid,jdbcType=DECIMAL}, #{signuser,jdbcType=VARCHAR}, 
+      #{specificreason,jdbcType=VARCHAR}, #{reviewstrtus,jdbcType=DECIMAL}, #{signidCopy,jdbcType=DECIMAL}, 
+      #{buildhx07Settletype,jdbcType=DECIMAL}, #{cusconfirmdateCopy,jdbcType=TIMESTAMP}, 
+      #{signStarttimeCopy,jdbcType=TIMESTAMP}, #{signnoCopy,jdbcType=VARCHAR}, #{unionsettleJson,jdbcType=VARCHAR}, 
+      #{showsourcetype,jdbcType=DECIMAL}, #{manualassociated,jdbcType=DECIMAL}, #{createtype,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.thunder.money.entity.ScmHx07Settlereceivablehead">
+    <!--@mbg.generated-->
+    insert into SCM_HX07_SETTLERECEIVABLEHEAD
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="billid != null">
+        BILLID,
+      </if>
+      <if test="billtype != null">
+        BILLTYPE,
+      </if>
+      <if test="sequence != null">
+        "SEQUENCE",
+      </if>
+      <if test="month != null">
+        "MONTH",
+      </if>
+      <if test="no != null">
+        "NO",
+      </if>
+      <if test="billdate != null">
+        BILLDATE,
+      </if>
+      <if test="status != null">
+        "STATUS",
+      </if>
+      <if test="corpid != null">
+        CORPID,
+      </if>
+      <if test="maker != null">
+        MAKER,
+      </if>
+      <if test="mender != null">
+        MENDER,
+      </if>
+      <if test="checker != null">
+        CHECKER,
+      </if>
+      <if test="makedate != null">
+        MAKEDATE,
+      </if>
+      <if test="editdate != null">
+        EDITDATE,
+      </if>
+      <if test="checkdatetime != null">
+        CHECKDATETIME,
+      </if>
+      <if test="customer != null">
+        CUSTOMER,
+      </if>
+      <if test="bizhong != null">
+        BIZHONG,
+      </if>
+      <if test="settledate != null">
+        SETTLEDATE,
+      </if>
+      <if test="settledesc != null">
+        SETTLEDESC,
+      </if>
+      <if test="note != null">
+        NOTE,
+      </if>
+      <if test="bizUnit != null">
+        BIZ_UNIT,
+      </if>
+      <if test="bizArea != null">
+        BIZ_AREA,
+      </if>
+      <if test="shop != null">
+        SHOP,
+      </if>
+      <if test="rentingCust != null">
+        RENTING_CUST,
+      </if>
+      <if test="contractCust != null">
+        CONTRACT_CUST,
+      </if>
+      <if test="salesMan != null">
+        SALES_MAN,
+      </if>
+      <if test="enddate != null">
+        ENDDATE,
+      </if>
+      <if test="sourceSrId != null">
+        SOURCE_SR_ID,
+      </if>
+      <if test="sourceSrNo != null">
+        SOURCE_SR_NO,
+      </if>
+      <if test="batYes != null">
+        BAT_YES,
+      </if>
+      <if test="batNo != null">
+        BAT_NO,
+      </if>
+      <if test="ischange != null">
+        ISCHANGE,
+      </if>
+      <if test="sourceSr != null">
+        SOURCE_SR,
+      </if>
+      <if test="billtitle != null">
+        BILLTITLE,
+      </if>
+      <if test="billdescr != null">
+        BILLDESCR,
+      </if>
+      <if test="bizShop != null">
+        BIZ_SHOP,
+      </if>
+      <if test="paydate != null">
+        PAYDATE,
+      </if>
+      <if test="isderate != null">
+        ISDERATE,
+      </if>
+      <if test="bak != null">
+        BAK,
+      </if>
+      <if test="roId != null">
+        RO_ID,
+      </if>
+      <if test="roNos != null">
+        RO_NOS,
+      </if>
+      <if test="roPrjs != null">
+        RO_PRJS,
+      </if>
+      <if test="lessee != null">
+        LESSEE,
+      </if>
+      <if test="cusconfirm != null">
+        CUSCONFIRM,
+      </if>
+      <if test="cusconfirmdate != null">
+        CUSCONFIRMDATE,
+      </if>
+      <if test="cusconfirmstaff != null">
+        CUSCONFIRMSTAFF,
+      </if>
+      <if test="isautocreat != null">
+        ISAUTOCREAT,
+      </if>
+      <if test="voucherversion != null">
+        VOUCHERVERSION,
+      </if>
+      <if test="depositamount != null">
+        DEPOSITAMOUNT,
+      </if>
+      <if test="sourceSplitSrId != null">
+        SOURCE_SPLIT_SR_ID,
+      </if>
+      <if test="isneedsplit != null">
+        ISNEEDSPLIT,
+      </if>
+      <if test="issplit != null">
+        ISSPLIT,
+      </if>
+      <if test="transforamount != null">
+        TRANSFORAMOUNT,
+      </if>
+      <if test="importdate != null">
+        IMPORTDATE,
+      </if>
+      <if test="sourcefile != null">
+        SOURCEFILE,
+      </if>
+      <if test="bizCompany != null">
+        BIZ_COMPANY,
+      </if>
+      <if test="sourcetype != null">
+        SOURCETYPE,
+      </if>
+      <if test="cusconfirmnotes != null">
+        CUSCONFIRMNOTES,
+      </if>
+      <if test="year != null">
+        "YEAR",
+      </if>
+      <if test="sapNo != null">
+        SAP_NO,
+      </if>
+      <if test="sapNoPrefab != null">
+        SAP_NO_PREFAB,
+      </if>
+      <if test="saperror != null">
+        SAPERROR,
+      </if>
+      <if test="sapMsgNo != null">
+        SAP_MSG_NO,
+      </if>
+      <if test="yearRed != null">
+        YEAR_RED,
+      </if>
+      <if test="sapNoRed != null">
+        SAP_NO_RED,
+      </if>
+      <if test="sapNoPrefabRed != null">
+        SAP_NO_PREFAB_RED,
+      </if>
+      <if test="sapMsgNoRed != null">
+        SAP_MSG_NO_RED,
+      </if>
+      <if test="saperrorRed != null">
+        SAPERROR_RED,
+      </if>
+      <if test="bluebilldate != null">
+        BLUEBILLDATE,
+      </if>
+      <if test="redbilldate != null">
+        REDBILLDATE,
+      </if>
+      <if test="parentbillid != null">
+        PARENTBILLID,
+      </if>
+      <if test="voucherparentbillid != null">
+        VOUCHERPARENTBILLID,
+      </if>
+      <if test="sapNoBack != null">
+        SAP_NO_BACK,
+      </if>
+      <if test="voucherversion1 != null">
+        VOUCHERVERSION1,
+      </if>
+      <if test="sapMsgNoBack != null">
+        SAP_MSG_NO_BACK,
+      </if>
+      <if test="saperrorBack != null">
+        SAPERROR_BACK,
+      </if>
+      <if test="voucherparentbillid1 != null">
+        VOUCHERPARENTBILLID1,
+      </if>
+      <if test="roincomeamount != null">
+        ROINCOMEAMOUNT,
+      </if>
+      <if test="derateper != null">
+        DERATEPER,
+      </if>
+      <if test="customerconfirmstatus != null">
+        CUSTOMERCONFIRMSTATUS,
+      </if>
+      <if test="sapNoPrefab2014 != null">
+        SAP_NO_PREFAB2014,
+      </if>
+      <if test="sapNo2014 != null">
+        SAP_NO2014,
+      </if>
+      <if test="sapMsgNo2014 != null">
+        SAP_MSG_NO2014,
+      </if>
+      <if test="isfinancered != null">
+        ISFINANCERED,
+      </if>
+      <if test="financeredreason != null">
+        FINANCEREDREASON,
+      </if>
+      <if test="financeredmarker != null">
+        FINANCEREDMARKER,
+      </if>
+      <if test="financereddate != null">
+        FINANCEREDDATE,
+      </if>
+      <if test="chargetype != null">
+        CHARGETYPE,
+      </if>
+      <if test="isoptlack != null">
+        ISOPTLACK,
+      </if>
+      <if test="sourceSplitSrNo != null">
+        SOURCE_SPLIT_SR_NO,
+      </if>
+      <if test="chargereason != null">
+        CHARGEREASON,
+      </if>
+      <if test="confirmlaststatus != null">
+        CONFIRMLASTSTATUS,
+      </if>
+      <if test="isnotice != null">
+        ISNOTICE,
+      </if>
+      <if test="checkerid != null">
+        CHECKERID,
+      </if>
+      <if test="changereason != null">
+        CHANGEREASON,
+      </if>
+      <if test="firstRoId != null">
+        FIRST_RO_ID,
+      </if>
+      <if test="ischeckshopman != null">
+        ISCHECKSHOPMAN,
+      </if>
+      <if test="customerconfirmstatuscopy != null">
+        CUSTOMERCONFIRMSTATUSCOPY,
+      </if>
+      <if test="rentingCustname != null">
+        RENTING_CUSTNAME,
+      </if>
+      <if test="pushedno != null">
+        PUSHEDNO,
+      </if>
+      <if test="warden != null">
+        WARDEN,
+      </if>
+      <if test="hxshopcusnote != null">
+        HXSHOPCUSNOTE,
+      </if>
+      <if test="cusconfirmamtcopy != null">
+        CUSCONFIRMAMTCOPY,
+      </if>
+      <if test="totalamount != null">
+        TOTALAMOUNT,
+      </if>
+      <if test="cusconfirmamt != null">
+        CUSCONFIRMAMT,
+      </if>
+      <if test="totalchangeamount != null">
+        TOTALCHANGEAMOUNT,
+      </if>
+      <if test="isahead != null">
+        ISAHEAD,
+      </if>
+      <if test="isadvance != null">
+        ISADVANCE,
+      </if>
+      <if test="notinvoicedamount != null">
+        NOTINVOICEDAMOUNT,
+      </if>
+      <if test="cuslevel != null">
+        CUSLEVEL,
+      </if>
+      <if test="issendhxshop != null">
+        ISSENDHXSHOP,
+      </if>
+      <if test="signingway != null">
+        SIGNINGWAY,
+      </if>
+      <if test="signingsequence != null">
+        SIGNINGSEQUENCE,
+      </if>
+      <if test="pdfurl != null">
+        PDFURL,
+      </if>
+      <if test="contractid != null">
+        CONTRACTID,
+      </if>
+      <if test="settlerecordid != null">
+        SETTLERECORDID,
+      </if>
+      <if test="staffid != null">
+        STAFFID,
+      </if>
+      <if test="sapEbankno != null">
+        SAP_EBANKNO,
+      </if>
+      <if test="settlerecordidNewest != null">
+        SETTLERECORDID_NEWEST,
+      </if>
+      <if test="syncdate != null">
+        SYNCDATE,
+      </if>
+      <if test="operations != null">
+        OPERATIONS,
+      </if>
+      <if test="operationsname != null">
+        OPERATIONSNAME,
+      </if>
+      <if test="lastauditRchecker != null">
+        LASTAUDIT_RCHECKER,
+      </if>
+      <if test="lastauditRtime != null">
+        LASTAUDIT_RTIME,
+      </if>
+      <if test="sdkback != null">
+        SDKBACK,
+      </if>
+      <if test="signtype != null">
+        SIGNTYPE,
+      </if>
+      <if test="signStarttime != null">
+        SIGN_STARTTIME,
+      </if>
+      <if test="signEndtime != null">
+        SIGN_ENDTIME,
+      </if>
+      <if test="signno != null">
+        SIGNNO,
+      </if>
+      <if test="signid != null">
+        SIGNID,
+      </if>
+      <if test="signuser != null">
+        SIGNUSER,
+      </if>
+      <if test="specificreason != null">
+        SPECIFICREASON,
+      </if>
+      <if test="reviewstrtus != null">
+        REVIEWSTRTUS,
+      </if>
+      <if test="signidCopy != null">
+        SIGNID_COPY,
+      </if>
+      <if test="buildhx07Settletype != null">
+        BUILDHX07_SETTLETYPE,
+      </if>
+      <if test="cusconfirmdateCopy != null">
+        CUSCONFIRMDATE_COPY,
+      </if>
+      <if test="signStarttimeCopy != null">
+        SIGN_STARTTIME_COPY,
+      </if>
+      <if test="signnoCopy != null">
+        SIGNNO_COPY,
+      </if>
+      <if test="unionsettleJson != null">
+        UNIONSETTLE_JSON,
+      </if>
+      <if test="showsourcetype != null">
+        SHOWSOURCETYPE,
+      </if>
+      <if test="manualassociated != null">
+        MANUALASSOCIATED,
+      </if>
+      <if test="createtype != null">
+        CREATETYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="billid != null">
+        #{billid,jdbcType=DECIMAL},
+      </if>
+      <if test="billtype != null">
+        #{billtype,jdbcType=DECIMAL},
+      </if>
+      <if test="sequence != null">
+        #{sequence,jdbcType=DECIMAL},
+      </if>
+      <if test="month != null">
+        #{month,jdbcType=VARCHAR},
+      </if>
+      <if test="no != null">
+        #{no,jdbcType=VARCHAR},
+      </if>
+      <if test="billdate != null">
+        #{billdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="corpid != null">
+        #{corpid,jdbcType=DECIMAL},
+      </if>
+      <if test="maker != null">
+        #{maker,jdbcType=DECIMAL},
+      </if>
+      <if test="mender != null">
+        #{mender,jdbcType=DECIMAL},
+      </if>
+      <if test="checker != null">
+        #{checker,jdbcType=DECIMAL},
+      </if>
+      <if test="makedate != null">
+        #{makedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="editdate != null">
+        #{editdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkdatetime != null">
+        #{checkdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customer != null">
+        #{customer,jdbcType=DECIMAL},
+      </if>
+      <if test="bizhong != null">
+        #{bizhong,jdbcType=DECIMAL},
+      </if>
+      <if test="settledate != null">
+        #{settledate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="settledesc != null">
+        #{settledesc,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="bizUnit != null">
+        #{bizUnit,jdbcType=DECIMAL},
+      </if>
+      <if test="bizArea != null">
+        #{bizArea,jdbcType=DECIMAL},
+      </if>
+      <if test="shop != null">
+        #{shop,jdbcType=DECIMAL},
+      </if>
+      <if test="rentingCust != null">
+        #{rentingCust,jdbcType=DECIMAL},
+      </if>
+      <if test="contractCust != null">
+        #{contractCust,jdbcType=DECIMAL},
+      </if>
+      <if test="salesMan != null">
+        #{salesMan,jdbcType=DECIMAL},
+      </if>
+      <if test="enddate != null">
+        #{enddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sourceSrId != null">
+        #{sourceSrId,jdbcType=DECIMAL},
+      </if>
+      <if test="sourceSrNo != null">
+        #{sourceSrNo,jdbcType=DECIMAL},
+      </if>
+      <if test="batYes != null">
+        #{batYes,jdbcType=DECIMAL},
+      </if>
+      <if test="batNo != null">
+        #{batNo,jdbcType=DECIMAL},
+      </if>
+      <if test="ischange != null">
+        #{ischange,jdbcType=DECIMAL},
+      </if>
+      <if test="sourceSr != null">
+        #{sourceSr,jdbcType=VARCHAR},
+      </if>
+      <if test="billtitle != null">
+        #{billtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="billdescr != null">
+        #{billdescr,jdbcType=VARCHAR},
+      </if>
+      <if test="bizShop != null">
+        #{bizShop,jdbcType=DECIMAL},
+      </if>
+      <if test="paydate != null">
+        #{paydate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isderate != null">
+        #{isderate,jdbcType=DECIMAL},
+      </if>
+      <if test="bak != null">
+        #{bak,jdbcType=VARCHAR},
+      </if>
+      <if test="roId != null">
+        #{roId,jdbcType=DECIMAL},
+      </if>
+      <if test="roNos != null">
+        #{roNos,jdbcType=VARCHAR},
+      </if>
+      <if test="roPrjs != null">
+        #{roPrjs,jdbcType=VARCHAR},
+      </if>
+      <if test="lessee != null">
+        #{lessee,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirm != null">
+        #{cusconfirm,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirmdate != null">
+        #{cusconfirmdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cusconfirmstaff != null">
+        #{cusconfirmstaff,jdbcType=DECIMAL},
+      </if>
+      <if test="isautocreat != null">
+        #{isautocreat,jdbcType=DECIMAL},
+      </if>
+      <if test="voucherversion != null">
+        #{voucherversion,jdbcType=DECIMAL},
+      </if>
+      <if test="depositamount != null">
+        #{depositamount,jdbcType=DECIMAL},
+      </if>
+      <if test="sourceSplitSrId != null">
+        #{sourceSplitSrId,jdbcType=DECIMAL},
+      </if>
+      <if test="isneedsplit != null">
+        #{isneedsplit,jdbcType=DECIMAL},
+      </if>
+      <if test="issplit != null">
+        #{issplit,jdbcType=DECIMAL},
+      </if>
+      <if test="transforamount != null">
+        #{transforamount,jdbcType=DECIMAL},
+      </if>
+      <if test="importdate != null">
+        #{importdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sourcefile != null">
+        #{sourcefile,jdbcType=VARCHAR},
+      </if>
+      <if test="bizCompany != null">
+        #{bizCompany,jdbcType=DECIMAL},
+      </if>
+      <if test="sourcetype != null">
+        #{sourcetype,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirmnotes != null">
+        #{cusconfirmnotes,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="sapNo != null">
+        #{sapNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sapNoPrefab != null">
+        #{sapNoPrefab,jdbcType=VARCHAR},
+      </if>
+      <if test="saperror != null">
+        #{saperror,jdbcType=VARCHAR},
+      </if>
+      <if test="sapMsgNo != null">
+        #{sapMsgNo,jdbcType=VARCHAR},
+      </if>
+      <if test="yearRed != null">
+        #{yearRed,jdbcType=VARCHAR},
+      </if>
+      <if test="sapNoRed != null">
+        #{sapNoRed,jdbcType=VARCHAR},
+      </if>
+      <if test="sapNoPrefabRed != null">
+        #{sapNoPrefabRed,jdbcType=VARCHAR},
+      </if>
+      <if test="sapMsgNoRed != null">
+        #{sapMsgNoRed,jdbcType=VARCHAR},
+      </if>
+      <if test="saperrorRed != null">
+        #{saperrorRed,jdbcType=VARCHAR},
+      </if>
+      <if test="bluebilldate != null">
+        #{bluebilldate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="redbilldate != null">
+        #{redbilldate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="parentbillid != null">
+        #{parentbillid,jdbcType=DECIMAL},
+      </if>
+      <if test="voucherparentbillid != null">
+        #{voucherparentbillid,jdbcType=DECIMAL},
+      </if>
+      <if test="sapNoBack != null">
+        #{sapNoBack,jdbcType=VARCHAR},
+      </if>
+      <if test="voucherversion1 != null">
+        #{voucherversion1,jdbcType=DECIMAL},
+      </if>
+      <if test="sapMsgNoBack != null">
+        #{sapMsgNoBack,jdbcType=VARCHAR},
+      </if>
+      <if test="saperrorBack != null">
+        #{saperrorBack,jdbcType=VARCHAR},
+      </if>
+      <if test="voucherparentbillid1 != null">
+        #{voucherparentbillid1,jdbcType=DECIMAL},
+      </if>
+      <if test="roincomeamount != null">
+        #{roincomeamount,jdbcType=DECIMAL},
+      </if>
+      <if test="derateper != null">
+        #{derateper,jdbcType=DECIMAL},
+      </if>
+      <if test="customerconfirmstatus != null">
+        #{customerconfirmstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="sapNoPrefab2014 != null">
+        #{sapNoPrefab2014,jdbcType=VARCHAR},
+      </if>
+      <if test="sapNo2014 != null">
+        #{sapNo2014,jdbcType=VARCHAR},
+      </if>
+      <if test="sapMsgNo2014 != null">
+        #{sapMsgNo2014,jdbcType=VARCHAR},
+      </if>
+      <if test="isfinancered != null">
+        #{isfinancered,jdbcType=DECIMAL},
+      </if>
+      <if test="financeredreason != null">
+        #{financeredreason,jdbcType=VARCHAR},
+      </if>
+      <if test="financeredmarker != null">
+        #{financeredmarker,jdbcType=DECIMAL},
+      </if>
+      <if test="financereddate != null">
+        #{financereddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="chargetype != null">
+        #{chargetype,jdbcType=DECIMAL},
+      </if>
+      <if test="isoptlack != null">
+        #{isoptlack,jdbcType=DECIMAL},
+      </if>
+      <if test="sourceSplitSrNo != null">
+        #{sourceSplitSrNo,jdbcType=VARCHAR},
+      </if>
+      <if test="chargereason != null">
+        #{chargereason,jdbcType=VARCHAR},
+      </if>
+      <if test="confirmlaststatus != null">
+        #{confirmlaststatus,jdbcType=DECIMAL},
+      </if>
+      <if test="isnotice != null">
+        #{isnotice,jdbcType=DECIMAL},
+      </if>
+      <if test="checkerid != null">
+        #{checkerid,jdbcType=DECIMAL},
+      </if>
+      <if test="changereason != null">
+        #{changereason,jdbcType=DECIMAL},
+      </if>
+      <if test="firstRoId != null">
+        #{firstRoId,jdbcType=DECIMAL},
+      </if>
+      <if test="ischeckshopman != null">
+        #{ischeckshopman,jdbcType=DECIMAL},
+      </if>
+      <if test="customerconfirmstatuscopy != null">
+        #{customerconfirmstatuscopy,jdbcType=DECIMAL},
+      </if>
+      <if test="rentingCustname != null">
+        #{rentingCustname,jdbcType=VARCHAR},
+      </if>
+      <if test="pushedno != null">
+        #{pushedno,jdbcType=VARCHAR},
+      </if>
+      <if test="warden != null">
+        #{warden,jdbcType=VARCHAR},
+      </if>
+      <if test="hxshopcusnote != null">
+        #{hxshopcusnote,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirmamtcopy != null">
+        #{cusconfirmamtcopy,jdbcType=DECIMAL},
+      </if>
+      <if test="totalamount != null">
+        #{totalamount,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirmamt != null">
+        #{cusconfirmamt,jdbcType=DECIMAL},
+      </if>
+      <if test="totalchangeamount != null">
+        #{totalchangeamount,jdbcType=DECIMAL},
+      </if>
+      <if test="isahead != null">
+        #{isahead,jdbcType=DECIMAL},
+      </if>
+      <if test="isadvance != null">
+        #{isadvance,jdbcType=DECIMAL},
+      </if>
+      <if test="notinvoicedamount != null">
+        #{notinvoicedamount,jdbcType=DECIMAL},
+      </if>
+      <if test="cuslevel != null">
+        #{cuslevel,jdbcType=DECIMAL},
+      </if>
+      <if test="issendhxshop != null">
+        #{issendhxshop,jdbcType=DECIMAL},
+      </if>
+      <if test="signingway != null">
+        #{signingway,jdbcType=DECIMAL},
+      </if>
+      <if test="signingsequence != null">
+        #{signingsequence,jdbcType=DECIMAL},
+      </if>
+      <if test="pdfurl != null">
+        #{pdfurl,jdbcType=VARCHAR},
+      </if>
+      <if test="contractid != null">
+        #{contractid,jdbcType=DECIMAL},
+      </if>
+      <if test="settlerecordid != null">
+        #{settlerecordid,jdbcType=DECIMAL},
+      </if>
+      <if test="staffid != null">
+        #{staffid,jdbcType=DECIMAL},
+      </if>
+      <if test="sapEbankno != null">
+        #{sapEbankno,jdbcType=VARCHAR},
+      </if>
+      <if test="settlerecordidNewest != null">
+        #{settlerecordidNewest,jdbcType=DECIMAL},
+      </if>
+      <if test="syncdate != null">
+        #{syncdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operations != null">
+        #{operations,jdbcType=VARCHAR},
+      </if>
+      <if test="operationsname != null">
+        #{operationsname,jdbcType=VARCHAR},
+      </if>
+      <if test="lastauditRchecker != null">
+        #{lastauditRchecker,jdbcType=DECIMAL},
+      </if>
+      <if test="lastauditRtime != null">
+        #{lastauditRtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sdkback != null">
+        #{sdkback,jdbcType=DECIMAL},
+      </if>
+      <if test="signtype != null">
+        #{signtype,jdbcType=DECIMAL},
+      </if>
+      <if test="signStarttime != null">
+        #{signStarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signEndtime != null">
+        #{signEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signno != null">
+        #{signno,jdbcType=VARCHAR},
+      </if>
+      <if test="signid != null">
+        #{signid,jdbcType=DECIMAL},
+      </if>
+      <if test="signuser != null">
+        #{signuser,jdbcType=VARCHAR},
+      </if>
+      <if test="specificreason != null">
+        #{specificreason,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewstrtus != null">
+        #{reviewstrtus,jdbcType=DECIMAL},
+      </if>
+      <if test="signidCopy != null">
+        #{signidCopy,jdbcType=DECIMAL},
+      </if>
+      <if test="buildhx07Settletype != null">
+        #{buildhx07Settletype,jdbcType=DECIMAL},
+      </if>
+      <if test="cusconfirmdateCopy != null">
+        #{cusconfirmdateCopy,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signStarttimeCopy != null">
+        #{signStarttimeCopy,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signnoCopy != null">
+        #{signnoCopy,jdbcType=VARCHAR},
+      </if>
+      <if test="unionsettleJson != null">
+        #{unionsettleJson,jdbcType=VARCHAR},
+      </if>
+      <if test="showsourcetype != null">
+        #{showsourcetype,jdbcType=DECIMAL},
+      </if>
+      <if test="manualassociated != null">
+        #{manualassociated,jdbcType=DECIMAL},
+      </if>
+      <if test="createtype != null">
+        #{createtype,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>
