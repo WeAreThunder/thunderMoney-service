@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Test2048 {
 
-    private static final int width = 3;
-    private static final int high = 3;
+    private static final int width = 4;
+    private static final int high = 4;
 
     public static void main(String[] args) throws IOException {
         System.out.println("-----------Start!---------");
