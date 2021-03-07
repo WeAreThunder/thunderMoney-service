@@ -50,7 +50,7 @@ public class SeBillAdjustDetail implements Serializable {
      * 调整金额
      */
     @ApiModelProperty(value = "调整金额")
-    private BigDecimal adjustAmout;
+    private BigDecimal adjustAmount;
 
     /**
      * 调整前营业额
