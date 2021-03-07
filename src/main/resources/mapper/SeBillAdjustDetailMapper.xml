@@ -10,7 +10,7 @@
     <result column="order_detail_id" jdbcType="INTEGER" property="orderDetailId" />
     <result column="charge_type" jdbcType="INTEGER" property="chargeType" />
     <result column="payment_type" jdbcType="INTEGER" property="paymentType" />
-    <result column="adjust_amout" jdbcType="DECIMAL" property="adjustAmout" />
+    <result column="adjust_amount" jdbcType="DECIMAL" property="adjustAmout" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
     <result column="tax_rate" jdbcType="DECIMAL" property="taxRate" />
     <result column="adjust_date" jdbcType="TIMESTAMP" property="adjustDate" />
@@ -21,7 +21,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, bill_id, order_no, order_detail_id, charge_type, payment_type, adjust_amout, 
+    id, bill_id, order_no, order_detail_id, charge_type, payment_type, adjust_amount, 
     amount, tax_rate, adjust_date, remark, create_time, edit_time, delete_flag
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -39,7 +39,7 @@
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.thunder.money.entity.SeBillAdjustDetail" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into se_bill_adjust_detail (bill_id, order_no, order_detail_id, 
-      charge_type, payment_type, adjust_amout, 
+      charge_type, payment_type, adjust_amount, 
       amount, tax_rate, adjust_date, 
       remark, create_time, edit_time, 
       delete_flag)
@@ -69,7 +69,7 @@
         payment_type,
       </if>
       <if test="adjustAmout != null">
-        adjust_amout,
+        adjust_amount,
       </if>
       <if test="amount != null">
         amount,
@@ -155,7 +155,7 @@
         payment_type = #{paymentType,jdbcType=INTEGER},
       </if>
       <if test="adjustAmout != null">
-        adjust_amout = #{adjustAmout,jdbcType=DECIMAL},
+        adjust_amount = #{adjustAmout,jdbcType=DECIMAL},
       </if>
       <if test="amount != null">
         amount = #{amount,jdbcType=DECIMAL},
@@ -189,7 +189,7 @@
       order_detail_id = #{orderDetailId,jdbcType=INTEGER},
       charge_type = #{chargeType,jdbcType=INTEGER},
       payment_type = #{paymentType,jdbcType=INTEGER},
-      adjust_amout = #{adjustAmout,jdbcType=DECIMAL},
+      adjust_amount = #{adjustAmout,jdbcType=DECIMAL},
       amount = #{amount,jdbcType=DECIMAL},
       tax_rate = #{taxRate,jdbcType=DECIMAL},
       adjust_date = #{adjustDate,jdbcType=TIMESTAMP},
